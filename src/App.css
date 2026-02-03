@@ -1,0 +1,85 @@
+:root{
+  --container: 1200px;
+  --accent:#0b5ed7;
+  --muted:#6b7280;
+}
+
+.app-root{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111}
+
+.top-nav{background: #f5f5f5; border-bottom:1px solid #f1f5f9; padding:8px 0; text-decoration: underline;}
+.top-nav-inner{max-width:var(--container); margin:0 auto; display:flex; justify-content:flex-end; gap:16px; padding:10px 8px}
+.top-nav-link{font-size:13px; color:#111; text-decoration:none; transition:color .2s}
+.top-nav-link:hover{color:var(--accent)}
+
+.site-header{border-bottom:1px solid #f1f5f9; background:#fff}
+.header-inner{margin:0 85px; display:flex; align-items:center; gap:12px; padding:8px 32px; justify-content:space-between}
+.left{display:flex; align-items:center; gap:12px; position:relative}
+.brand{height:40px}
+.categories-wrapper{position:relative}
+.categories{margin-left: 50px; background:none;font-weight:700; cursor:pointer; font-size:14px; border:none}
+.categories:hover{background-color: #ccc; border-color: none;}
+.categories-panel{position:absolute; top:100%; left:-20px; width:600px; background:#fff; border:1px solid #f1f5f9; border-radius:8px; box-shadow:0 10px 30px rgba(2,6,23,0.12); padding:16px; display:flex; gap:16px; z-index:100; margin-top:8px}
+.cat-left{width:80px; border-right:1px solid #f1f5f9; padding-right:12px}
+.cat-tab{display:block; padding:8px 12px; background:none; border:none; cursor:pointer; border-radius:20px; font-weight:700; font-size:13px; color:#111; margin-bottom:6px}
+.cat-tab.active{background:#1a1a1a; color:#fff}
+.cat-columns{flex:1; display:grid; grid-template-columns:repeat(3, 1fr); gap:20px}
+.cat-column h4{margin:0 0 8px 0; font-size:13px; font-weight:700; color:#111}
+.cat-column ul{list-style:none; padding:0; margin:0}
+.cat-column li{padding:4px 0; font-size:13px; color:#666; cursor:pointer; transition:color .2s}
+.cat-column li:hover{color:var(--accent)}
+.search-container{flex:1; max-width:600px; position:relative}
+.search-bar{display:flex; align-items:center; gap:8px; background:#fff; border:1px solid #e6e9ef; border-radius:28px; padding:15px 20px; cursor:text}
+.search-bar:hover{border-color:#111}
+.search-icon{width:18px; height:18px; color:#999; flex-shrink:0}
+.search-bar input{flex:1; border:none; outline:none; background:none; font-size:14px; color:#111}
+.search-bar input::placeholder{color:#ccc}
+.search-suggestions{position:absolute; top:100%; left:0; right:0; background:#fff; border:1px solid #e6e9ef; border-top:none; border-radius:0 0 12px 12px; padding:16px 0; z-index:40; max-height:400px; overflow-y:auto; box-shadow:0 10px 30px rgba(2,6,23,0.12)}
+.suggestions-section{padding:0 16px}
+.suggestions-section h3{margin:0 0 12px 0; font-size:13px; font-weight:700; color:#111; text-transform:uppercase}
+.authors-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px}
+.author-item{display:flex; flex-direction:column; align-items:center; gap:8px; padding:12px; border-radius:8px; cursor:pointer; transition:background .2s}
+.author-item:hover{background:#f5f5f5}
+.author-avatar{width:56px; height:56px; border-radius:8px; background:#f1f5f9; display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0}
+.author-name{font-size:13px; font-weight:500; color:#111; text-align:center; line-height:1.3}
+.right{display:flex; align-items:center; gap:10px}
+.icon-cart{background:none; border:none; font-size:18px; cursor:pointer}
+.auth-buttons{display:flex; gap:6px}
+.btn{padding:6px 14px; border-radius:10px; cursor:pointer; font-weight:700; font-size:13px}
+.btn-login{padding:15px 14px; border:1px solid #ccc; color:#111}
+.btn-login:hover{ border:1px solid #111; }
+.btn-register{background:var(--accent); color:#fff; border:none}
+.btn-register:hover{background:#0a4fb8}
+
+.main{max-width:var(--container); margin:8px auto; padding:0 8px}
+.section-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px}
+.section-head h2{margin:0; font-size:24px; line-height: 2;}
+.see-all{color:#111; text-decoration:underline; font-size: 12px;}
+
+.carousel-section{display:flex; gap:18px; align-items:flex-start; min-height:360px}
+.promo{width:240px; flex-shrink:0; border-radius:14px; background:linear-gradient(180deg,#2563eb,#60a5fa); color:#fff; padding:20px; display:flex; align-items:center; min-height:320px}
+.promo-title{font-size:24px; font-weight:800; line-height:1}
+.carousel{flex:1; position:relative; overflow:hidden; min-height:320px}
+.track{overflow-x:auto; scroll-behavior:smooth; width:100%; max-width:calc(100vw - 300px)}
+.track::-webkit-scrollbar{display:none}
+.track{scrollbar-width:none}
+.track-inner{display:flex; gap:14px; padding:8px 0; align-items:flex-start; width:max-content}
+.card{flex:0 0 200px; background:#fff; border:1px solid #d5d5d5; border-radius:12px; padding:10px; display:flex; flex-direction:column; gap:8px; min-height:320px}
+.card:hover{transform:translateY(-6px); box-shadow:0 16px 32px rgba(2,6,23,0.08)}
+.thumb{height:250px; border-radius:8px; background:linear-gradient(135deg,#f8faff,#f0f4ff); display:flex; align-items:center; justify-content:center; color:#64748b; font-size:40px}
+.title{font-weight:700; font-size:15px}
+.author{font-size:13px; color:var(--muted)}
+.meta{font-size:13px; color:var(--muted)}
+.price{margin-top:auto; color:#dc2626; font-weight:800}
+
+.nav{position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:999px; background:rgba(255,255,255,0.95); border:1px solid #e6e9ef; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 8px 24px rgba(2,6,23,0.08); opacity:0; transition:all .2s; z-index:10; font-weight:700; font-size:22px; color:var(--accent)}
+.carousel:hover .nav{opacity:1}
+.nav:hover{background:#fff; box-shadow:0 12px 32px rgba(2,6,23,0.15); transform:translateY(-50%) scale(1.05)}
+.nav:active{transform:translateY(-50%) scale(0.95)}
+.nav.prev{left:6px}
+.nav.next{right:6px}
+
+@media(max-width:768px){
+  .carousel-section{flex-direction:column}
+  .promo{width:100%}
+  .nav{opacity:1}
+}

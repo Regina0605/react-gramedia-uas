@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="36" viewBox="0 0 160 36">
+  <rect width="160" height="36" fill="none" />
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="18" cy="18" r="16" fill="#0b5ed7" />
+    <path d="M12 22 L22 22 L22 14 L12 14 Z" fill="#fff" opacity="0.95" />
+    <text x="44" y="24" font-family="Inter, Arial, sans-serif" font-size="16" fill="#0b5ed7" font-weight="700">Gramedia.com</text>
+  </g>
+</svg>
